@@ -1,0 +1,23 @@
+[core]
+    excludesfile = ~/.gitignore
+[user]
+    name = Tobias Muellerleile
+    email = tobias@muellerleile.net
+[color]
+    ui = auto
+[pack]
+    threads = 0
+[github]
+    user = tmuellerleile
+[alias]
+    st = status
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff
+    lg = log --stat
+    ps = push
+    pl = pull
+[gist]
+    private = true
+    browse = false
