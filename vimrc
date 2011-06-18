@@ -14,8 +14,9 @@ set nofoldenable
 " never show vim's intro screen
 set shortmess+=I
 
-" no swap for files on certain volume(s):
+" no swap for files on certain volumes:
 autocmd BufRead,BufNewFile /Volumes/dav/* set noswapfile
+autocmd BufRead,BufNewFile ~/Dropbox/* set noswapfile
 " and no writing backups:
 set nobackup
 set nowritebackup
