@@ -49,3 +49,10 @@ alias gitx='gitx --all'
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
+
+function ssh {
+    term_save=$TERM
+    TERM=xterm-color
+    /usr/bin/ssh "$@"
+    TERM=$term_save
+}
