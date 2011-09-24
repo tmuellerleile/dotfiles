@@ -46,6 +46,8 @@ alias ls='ls $LS_OPTIONS'
 
 alias gitx='gitx --all'
 
+alias mkpasswd='LC_ALL=C && cat /dev/urandom | tr -dc [:alnum:] | head -c$1'
+
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
