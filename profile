@@ -11,9 +11,7 @@ export HISTFILESIZE=10000
 export CDPATH=~:~/dev
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
-if [ -d "/usr/local/lib/node" ]; then
-   export NODE_PATH="/usr/local/lib/node"
-fi
+export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules
 
 if [ ! -z "$DISPLAY" ]; then
     export EDITOR=/usr/local/bin/mvim # make mvim the default editor if we're on a local terminal
