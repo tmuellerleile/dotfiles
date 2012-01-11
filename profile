@@ -44,7 +44,7 @@ alias ls='ls $LS_OPTIONS'
 
 alias gitx='gitx --all'
 
-function mkpasswd() {
+mkpasswd() {
     NUMCHARS=${1:-"8"} && LC_ALL=C && cat /dev/urandom | tr -dc [:alnum:] | head -c$NUMCHARS && echo
 }
 
