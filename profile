@@ -44,7 +44,9 @@ alias ls='ls $LS_OPTIONS'
 
 alias gitx='gitx --all'
 
-alias mkpasswd="NUMCHARS=${1:-"8"} && LC_ALL=C && cat /dev/urandom | tr -dc [:alnum:] | head -c$NUMCHARS && echo"
+function mkpasswd() {
+    NUMCHARS=${1:-"8"} && LC_ALL=C && cat /dev/urandom | tr -dc [:alnum:] | head -c$NUMCHARS && echo
+}
 
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
