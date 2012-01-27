@@ -42,6 +42,8 @@ alias l='ls $LS_OPTIONS -lA'
 alias ll='ls $LS_OPTIONS -l'
 alias ls='ls $LS_OPTIONS'
 
+alias rgrep='grep -r'
+
 alias gitx='gitx --all'
 
 mkpasswd() {
