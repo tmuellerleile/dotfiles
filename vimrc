@@ -35,6 +35,9 @@ set shiftwidth=4
 set expandtab
 set autoindent
 
+" special rules for special file types
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+
 " command line completion options:
 set wildmode=longest:full
 set wildmenu
