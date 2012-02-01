@@ -35,6 +35,9 @@ set shiftwidth=4
 set expandtab
 set autoindent
 
+" file type detection
+au BufNewFile,BufRead *.zcml set filetype=xml
+
 " special rules for special file types
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 
