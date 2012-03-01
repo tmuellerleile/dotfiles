@@ -47,7 +47,7 @@ set wildmenu
 
 " GUI options:
 if has("gui_running")
-    set background=light
+    set background=dark
     colorscheme solarized
     set guifont=Meslo\ LG\ S\ DZ:h13"
     set lines=35
