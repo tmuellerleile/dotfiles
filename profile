@@ -4,6 +4,7 @@ export LC_CTYPE="de_DE.UTF-8"
 export LC_ALL="de_DE.UTF-8"
 
 export HISTCONTROL="ignoreboth"
+export HISTIGNORE="ls:bg:fg:history"
 export HISTSIZE=10000
 export SAVEHIST=10000
 export HISTFILESIZE=10000
