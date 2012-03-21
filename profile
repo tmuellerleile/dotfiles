@@ -30,7 +30,7 @@ export LESS="-iqrx4"
 alias mysqlstart='mysqld_safe --datadir=/usr/local/var/mysql &'
 alias mysqlstop='mysqladmin -u root -p shutdown'
 
-alias mongodbstart='mongod run --config /usr/local/Cellar/mongodb/2.0.3-x86_64/mongod.conf'
+alias mongodbstart='mongod run --config /usr/local/Cellar/mongodb/2.0.4-x86_64/mongod.conf'
 
 alias postgresstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias postgresstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
