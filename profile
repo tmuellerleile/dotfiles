@@ -47,7 +47,7 @@ alias rgrep='grep -r'
 
 alias gitx='gitx --all'
 
-alias jslint='jslint --vars --sloppy --node --color --indent 2'
+alias jslint='jslint --vars --sloppy --node --color --white --plusplus'
 
 mkpasswd() {
     NUMCHARS=${1:-"8"} && LC_ALL=C && cat /dev/urandom | tr -dc [:alnum:] | head -c$NUMCHARS && echo
