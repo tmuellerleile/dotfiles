@@ -48,6 +48,8 @@ set wildmenu
 " GUI options:
 if has("gui_running")
     set background=dark
+    let g:solarized_contrast="high"
+    let g:solarized_hitrail=1
     colorscheme solarized
     set guifont=Meslo\ LG\ S\ DZ:h13"
     set lines=35
