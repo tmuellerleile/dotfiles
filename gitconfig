@@ -16,6 +16,7 @@
     br = branch
     co = checkout
     df = diff
+    la = log -1 HEAD
     lg = log --stat
     ps = push
     pl = pull
