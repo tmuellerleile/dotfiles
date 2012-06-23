@@ -16,14 +16,16 @@
     br = branch
     co = checkout
     df = diff
+    di = diff
     la = log -1 HEAD
     lg = log --stat
     ps = push
     pl = pull
     am = commit --amend
     aa = add --all
-    di = diff
     dh1 = diff HEAD~1
 [gist]
     private = true
     browse = false
+[color "diff"]
+	whitespace = red reverse
