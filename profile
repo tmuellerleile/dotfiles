@@ -63,3 +63,25 @@ function ssh {
     /usr/bin/ssh "$@"
     TERM=$term_save
 }
+
+prompt_git() {
+    git branch &>/dev/null || return 1
+    HEAD="$(git symbolic-ref HEAD 2>/dev/null)"
+    BRANCH="${HEAD##*/}"
+    [[ -n "$(git status 2>/dev/null | grep -F 'working directory clean')" ]] || STATUS='!'
+    printf '(%s)' "${BRANCH:-unknown}${STATUS}"
+}
+
+COLOR_USER='\[\e[1;36m\]'
+COLOR_HOSTNAME='\[\e[1;33m\]'
+COLOR_WD='\[\e[0;36m\]'
+COLOR_RESET='\[\e[0m\]'
+
+prompt_on() {
+    PS1='['${COLOR_USER}'\u'${COLOR_RESET}'@'${COLOR_HOSTNAME}'\h'${COLOR_RESET}':'${COLOR_WD}'\W'${COLOR_RESET}']$(prompt_git) \$ '
+}
+prompt_on
+
+prompt_off() {
+    PS1='$ '
+}
