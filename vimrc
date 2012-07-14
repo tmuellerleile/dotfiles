@@ -40,6 +40,7 @@ au BufNewFile,BufRead *.zcml set filetype=xml
 
 " special rules for special file types
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+autocmd FileType tex setlocal shiftwidth=2 tabstop=2
 
 " command line completion options:
 set wildmode=longest:full
