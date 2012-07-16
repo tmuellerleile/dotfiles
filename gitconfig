@@ -1,5 +1,7 @@
 [core]
     excludesfile = ~/.gitignore
+[init]
+    templatedir = ~/.git_templates
 [user]
     name = Tobias Muellerleile
     email = tobias@muellerleile.net
