@@ -13,6 +13,7 @@ export CDPATH=~:~/dev
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
 if [ ! -z "$DISPLAY" ]; then
     export EDITOR=/usr/local/bin/mvim # make mvim the default editor if we're on a local terminal
