@@ -10,6 +10,9 @@ case "$2" in
 	fixup)
 		# dito
 		;;
+	merge)
+		# dito
+		;;
 	*)
 		echo "# Parent commit:" >> "$1"
 		echo "$(git log -1 | sed -n 's/^\(.*\)$/# \1/p')" >> "$1"
