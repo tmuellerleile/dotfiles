@@ -13,6 +13,9 @@ case "$2" in
 	merge)
 		# dito
 		;;
+	message)
+		# dito
+		;;
 	*)
 		echo "# Parent commit:" >> "$1"
 		echo "$(git log -1 | sed -n 's/^\(.*\)$/# \1/p')" >> "$1"
