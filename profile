@@ -9,7 +9,7 @@ export HISTSIZE=10000
 export SAVEHIST=10000
 export HISTFILESIZE=10000
 
-export CDPATH=~:~/dev
+export CDPATH=".:~:~/dev"
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH
 
 export NODE_PATH=/usr/local/lib/node:/usr/local/share/npm/lib/node_modules
