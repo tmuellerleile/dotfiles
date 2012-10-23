@@ -37,6 +37,7 @@ set autoindent
 
 " file type detection
 au BufNewFile,BufRead *.zcml set filetype=xml
+au BufNewFile,BufRead *.md   set filetype=markdown
 
 " special rules for special file types
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
