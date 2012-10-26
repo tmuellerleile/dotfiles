@@ -31,3 +31,5 @@
     browse = false
 [color "diff"]
 	whitespace = red reverse
+[push]
+	default = simple
