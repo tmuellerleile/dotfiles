@@ -23,7 +23,7 @@ set nowritebackup
 
 " no error bells:
 set noerrorbells
-set novisualbell
+set visualbell
 set t_vb=
 
 " show trailing whitespaces as · in list mode
