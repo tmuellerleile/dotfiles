@@ -7,3 +7,4 @@ Session.vim
 ._*
 *.pyc
 *.pyo
+npm-debug.log
