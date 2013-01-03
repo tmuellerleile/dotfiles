@@ -1,18 +1,13 @@
 " basic settings:
 set nocompatible
-syntax on
-set showmatch
-set ruler
-set number
-set showcmd
 set ignorecase
 set incsearch
 set smartcase
-set linebreak
-set nofoldenable
+set modelines=0
 
-" never show vim's intro screen
-set shortmess+=I
+filetype off
+call pathogen#runtime_append_all_bundles()
+filetype plugin indent on
 
 " no swap for files on certain volumes:
 autocmd BufRead,BufNewFile /Volumes/dav/* set noswapfile
@@ -21,31 +16,52 @@ autocmd BufRead,BufNewFile ~/Dropbox/* set noswapfile
 set nobackup
 set nowritebackup
 
+" command line completion options:
+set wildmode=longest:full
+set wildmenu
+
+" display options
+syntax on
+set ruler
+set number
+set nofoldenable
+set showcmd
+set showmatch
+set showmode
+set laststatus=2
+set scrolloff=3
+
+" text wrapping:
+set wrap
+set textwidth=79
+set formatoptions=qrn1
+set colorcolumn=85
+
+" never show vim's intro screen
+set shortmess+=I
+
 " no error bells:
 set noerrorbells
 set visualbell
 set t_vb=
 
-" show trailing whitespaces as · in list mode
-set listchars=trail:·
+" special char display in list mode
+set listchars=trail:·,tab:▸\ ,eol:¬
 
 " code formatting:
 set tabstop=4
 set shiftwidth=4
+set softtabstop=4
 set expandtab
 set autoindent
 
 " file type detection
 au BufNewFile,BufRead *.zcml set filetype=xml
-au BufNewFile,BufRead *.md   set filetype=markdown
+au BufRead,BufNewFile *.mkd,*.markdown,*.mdwn,*.md   set filetype=mkd
 
 " special rules for special file types
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 autocmd FileType tex setlocal shiftwidth=2 tabstop=2
-
-" command line completion options:
-set wildmode=longest:full
-set wildmenu
 
 " GUI options:
 if has("gui_running")
@@ -84,4 +100,22 @@ endfunction
 
 inoremap <Tab> <C-R>=SuperCleverTab()<cr>
 
-map <F2> :NERDTreeToggle<CR>
+let mapleader = ","
+
+" quick reST/Markdown headings:
+nnoremap <leader>1 yypVr=
+nnoremap <leader>2 yypVr-
+
+" remove trailing whitespace:
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
+" select last pasted text:
+nnoremap <leader>v V`]
+
+" fix search regex syntax:
+nnoremap / /\v
+vnoremap / /\v
+set gdefault
+
+nnoremap <tab> %
+vnoremap <tab> %
