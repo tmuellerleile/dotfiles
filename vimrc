@@ -62,6 +62,7 @@ au BufRead,BufNewFile *.mkd,*.markdown,*.mdwn,*.md   set filetype=mkd
 " special rules for special file types
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 autocmd FileType tex setlocal shiftwidth=2 tabstop=2
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
 
 " GUI options:
 if has("gui_running")
