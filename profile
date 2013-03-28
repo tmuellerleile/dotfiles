@@ -8,6 +8,7 @@ export HISTIGNORE="ls:bg:fg:history"
 export HISTSIZE=10000
 export SAVEHIST=10000
 export HISTFILESIZE=10000
+shopt -s histappend
 
 export CDPATH=".:~:~/dev"
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH
