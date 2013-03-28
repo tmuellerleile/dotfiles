@@ -1,1 +1,4 @@
 --ignore-dir=node_modules
+
+--type-add=js=json
+--type-add=php=ctp
