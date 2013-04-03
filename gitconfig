@@ -21,6 +21,7 @@
     di = diff
     la = log -1 HEAD
     lg = log --stat
+    lgg = log --all --graph --decorate=short
     ps = push
     pl = pull
     am = commit --amend
