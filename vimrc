@@ -35,7 +35,7 @@ set scrolloff=3
 set wrap
 set textwidth=79
 set formatoptions=qrn1
-set colorcolumn=85
+set colorcolumn=80
 
 " never show vim's intro screen
 set shortmess+=I
