@@ -6,7 +6,7 @@ set smartcase
 set modelines=0
 
 filetype off
-call pathogen#runtime_append_all_bundles()
+execute pathogen#infect()
 filetype plugin indent on
 
 " no swap for files on certain volumes:
