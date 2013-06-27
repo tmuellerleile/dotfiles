@@ -120,3 +120,7 @@ set gdefault
 
 nnoremap <tab> %
 vnoremap <tab> %
+
+let g:syntastic_mode_map = { 'mode': 'active' }
+let g:syntastic_javascript_checkers=['jshint']
+let g:syntastic_python_checkers=['pyflakes']
