@@ -34,8 +34,8 @@ alias mysqlstop='mysqladmin -u root -p shutdown'
 
 alias mongodbstart='mongod run --config /usr/local/etc/mongod.conf'
 
-alias postgresstart='pg_ctl -D /usr/local/var/postgres9.3 -l /usr/local/var/postgres/server.log start'
-alias postgresstop='pg_ctl -D /usr/local/var/postgres9.3 stop -s -m fast'
+alias postgresstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
+alias postgresstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 
 alias redisstart='redis-server /usr/local/etc/redis.conf'
 
