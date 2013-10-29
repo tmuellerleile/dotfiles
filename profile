@@ -46,6 +46,7 @@ alias ll='ls $LS_OPTIONS -l'
 alias ls='ls $LS_OPTIONS'
 
 alias rgrep='grep -r'
+alias top='top -u'
 
 alias gitx='gitx --all'
 
