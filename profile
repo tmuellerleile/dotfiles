@@ -1,6 +1,3 @@
-export LANG="de_DE.UTF-8"
-export LANGUAGE="de"
-export LC_CTYPE="de_DE.UTF-8"
 export LC_ALL="de_DE.UTF-8"
 
 export HISTCONTROL="ignoreboth"
@@ -47,8 +44,6 @@ alias ls='ls $LS_OPTIONS'
 
 alias rgrep='grep -r'
 alias top='top -u'
-
-alias gitx='gitx --all'
 
 alias jslint='jslint --vars --sloppy --node --color --white --plusplus'
 
