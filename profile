@@ -85,3 +85,7 @@ prompt_on
 prompt_off() {
     PS1='$ '
 }
+
+if [ -x ~/.profile_local ]; then
+  source ~/.profile_local
+fi
