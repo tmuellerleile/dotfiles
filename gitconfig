@@ -13,6 +13,7 @@
     user = tmuellerleile
 [alias]
     st = status
+    s = status -sb
     ci = commit
     cia = commit -a
     br = branch
