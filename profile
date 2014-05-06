@@ -66,8 +66,16 @@ prompt_git() {
     git branch &>/dev/null || return 1
     HEAD="$(git symbolic-ref HEAD 2>/dev/null)"
     BRANCH="${HEAD##*/}"
-    [[ -n "$(git status 2>/dev/null | grep -F 'working directory clean')" ]] || STATUS='!'
-    printf '(%s)' "${BRANCH:-unknown}${STATUS}"
+    status="$(git status 2>/dev/null)"
+    # borrowed from github.com/cowboy/dotfiles:
+    flags="$(
+    echo "$status" | awk 'BEGIN {r=""} \
+      /^Changes to be committed:$/        {r=r "+"}\
+      /^Changes not staged for commit:$/  {r=r "!"}\
+      /^Untracked files:$/                {r=r "?"}\
+      END {print r}'
+    )"
+    printf '(%s)' "${BRANCH:-unknown}${flags}"
 }
 
 COLOR_USER='\[\e[1;36m\]'
