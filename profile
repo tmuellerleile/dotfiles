@@ -66,13 +66,14 @@ prompt_git() {
     git branch &>/dev/null || return 1
     HEAD="$(git symbolic-ref HEAD 2>/dev/null)"
     BRANCH="${HEAD##*/}"
-    status="$(git status 2>/dev/null)"
+    status="$(git status -s 2>/dev/null)"
     # borrowed from github.com/cowboy/dotfiles:
     flags="$(
     echo "$status" | awk 'BEGIN {r=""} \
-      /^Changes to be committed:$/        {r=r "+"}\
-      /^Changes not staged for commit:$/  {r=r "!"}\
-      /^Untracked files:$/                {r=r "?"}\
+      /^A/    {r=r "+"}\
+      /^R/    {r=r "-"}\
+      /^.M/   {r=r "!"}\
+      /^\?\?/ {r=r "?"}\
       END {print r}'
     )"
     printf '(%s)' "${BRANCH:-unknown}${flags}"
