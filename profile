@@ -69,12 +69,12 @@ prompt_git() {
     status="$(git status -s 2>/dev/null)"
     # borrowed from github.com/cowboy/dotfiles:
     flags="$(
-    echo "$status" | awk 'BEGIN {r=""} \
-      /^A/    {r=r "+"}\
-      /^R/    {r=r "-"}\
-      /^.M/   {r=r "!"}\
-      /^\?\?/ {r=r "?"}\
-      END {print r}'
+    echo "$status" | awk 'BEGIN {s="";d="";m="";u=""} \
+      /^M/    {s="+"}\
+      /^D/    {d="-"}\
+      /^.M/   {m="!"}\
+      /^\?\?/ {u="?"}\
+      END {print s d m u}'
     )"
     printf '(%s)' "${BRANCH:-unknown}${flags}"
 }
