@@ -49,8 +49,8 @@ set t_vb=
 set listchars=trail:·,tab:▸\ ,eol:¬
 
 " code formatting:
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set softtabstop=4
 set expandtab
 set autoindent
@@ -58,11 +58,6 @@ set autoindent
 " file type detection
 au BufNewFile,BufRead *.zcml set filetype=xml
 au BufRead,BufNewFile *.mkd,*.markdown,*.mdwn,*.md   set filetype=mkd
-
-" special rules for special file types
-autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
-autocmd FileType tex setlocal shiftwidth=2 tabstop=2
-autocmd FileType html setlocal shiftwidth=2 tabstop=2
 
 " GUI options:
 if has("gui_running")
