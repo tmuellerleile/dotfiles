@@ -57,7 +57,7 @@ set autoindent
 
 " file type detection
 au BufNewFile,BufRead *.zcml set filetype=xml
-au BufRead,BufNewFile *.mkd,*.markdown,*.mdwn,*.md   set filetype=mkd
+au BufNewFile,BufRead *.mkd,*.markdown,*.mdwn,*.md set filetype=markdown
 
 " GUI options:
 if has("gui_running")
