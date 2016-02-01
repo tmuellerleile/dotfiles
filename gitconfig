@@ -9,6 +9,8 @@
     ui = auto
 [pack]
     threads = 0
+[transfer]
+    fsckobjects = true
 [github]
     user = tmuellerleile
 [alias]
