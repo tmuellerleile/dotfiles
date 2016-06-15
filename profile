@@ -23,7 +23,7 @@ else
 fi
 
 export PAGER=/usr/bin/less
-export LESS="-iqrx4"
+export LESS="-iqRx2"
 
 # some convenience commands:
 alias mysqlstart='mysqld_safe --datadir=/usr/local/var/mysql &'
