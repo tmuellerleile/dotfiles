@@ -39,3 +39,7 @@
 	default = simple
 [diff]
 	compactionHeuristic = true
+[pager]
+	log = /usr/local/Library/LinkedKegs/git/share/git-core/contrib/diff-highlight/diff-highlight | less
+	show = /usr/local/Library/LinkedKegs/git/share/git-core/contrib/diff-highlight/diff-highlight | less
+	diff = /usr/local/Library/LinkedKegs/git/share/git-core/contrib/diff-highlight/diff-highlight | less
