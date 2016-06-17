@@ -1,7 +1,7 @@
 export LC_ALL="de_DE.UTF-8"
 
 export HISTCONTROL="ignoreboth"
-export HISTIGNORE="ls*:bg:fg:history:git cherry-pick*"
+export HISTIGNORE="ls*:bg:fg:history:git cherry-pick*:git show *"
 export HISTSIZE=10000
 export SAVEHIST=10000
 export HISTFILESIZE=10000
