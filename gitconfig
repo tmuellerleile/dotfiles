@@ -34,12 +34,12 @@
     private = true
     browse = false
 [color "diff"]
-	whitespace = red reverse
+    whitespace = red reverse
 [push]
-	default = simple
+    default = simple
 [diff]
-	compactionHeuristic = true
+    compactionHeuristic = true
 [pager]
-	log = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
-	show = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
-	diff = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
+    log = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
+    show = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
+    diff = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
