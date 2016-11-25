@@ -1,6 +1,6 @@
 export LC_ALL="de_DE.UTF-8"
 
-export HISTIGNORE="&:[ ]*:ls*:bg:fg:history:git cherry-pick*:git show *"
+export HISTIGNORE="&:[ ]*:ls*:bg:fg:history:git cherry-pick*:git show [a-f0-9]*"
 export HISTSIZE=10000
 export SAVEHIST=10000
 export HISTFILESIZE=10000
