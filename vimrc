@@ -62,7 +62,7 @@ if has("gui_running")
     let g:solarized_contrast="high"
     let g:solarized_hitrail=1
     colorscheme solarized
-    set guifont=Source\ Code\ Pro:h15"
+    set guifont=Input\ Mono:h15"
     set lines=35
     set columns=120
     set guioptions-=T " remove toolbar
