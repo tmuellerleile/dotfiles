@@ -9,9 +9,6 @@ filetype off
 execute pathogen#infect()
 filetype plugin indent on
 
-" no swap for files on certain volumes:
-autocmd BufRead,BufNewFile /Volumes/dav/* set noswapfile
-autocmd BufRead,BufNewFile ~/Dropbox/* set noswapfile
 " and no writing backups:
 set nobackup
 set nowritebackup
