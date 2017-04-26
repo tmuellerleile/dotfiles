@@ -15,6 +15,7 @@ export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 if [[ $SSH_CONNECTION ]]; then
     export EDITOR=/usr/bin/vim
     export VISUAL=$EDITOR
+    eval `/usr/bin/ssh-agent -s` > /dev/null
 else
     export EDITOR=/usr/local/bin/mvim # make mvim the default editor if we're on a local terminal
     alias vim=/usr/local/bin/mvim # ... and even remap vim to mvim
