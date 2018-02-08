@@ -10,7 +10,6 @@ export CDPATH=".:~:~/dev"
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH
 
 export NODE_PATH=/usr/local/lib/node:/usr/local/share/npm/lib/node_modules
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
 if [[ $SSH_CONNECTION ]]; then
     export EDITOR=/usr/bin/vim
@@ -25,15 +24,6 @@ fi
 export PAGER=/usr/bin/less
 export LESS="-iqRx2"
 
-# some convenience commands:
-alias mysqlstart='mysqld_safe --datadir=/usr/local/var/mysql &'
-alias mysqlstop='mysqladmin -u root -p shutdown'
-
-alias postgresstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
-alias postgresstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
-
-alias redisstart='redis-server /usr/local/etc/redis.conf'
-
 alias pdfjoin='"/System/Library/Automator/Combine PDF Pages.action/Contents/Resources/join.py"'
 
 alias l='ls $LS_OPTIONS -lA'
@@ -44,12 +34,6 @@ alias rgrep='grep -r'
 alias top='top -u'
 
 alias jslint='jslint --vars --sloppy --node --color --white --plusplus'
-
-alias npmhrz='npm --userconfig ~/.npmrc-hrz'
-
-mkpasswd() {
-    NUMCHARS=${1:-"8"} && LC_ALL=C && cat /dev/urandom | tr -dc [:alnum:] | head -c$NUMCHARS && echo
-}
 
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
