@@ -77,6 +77,15 @@ prompt_off() {
     PS1='$ '
 }
 
+# virtualenvwrapper setup:
+if [ -x /usr/local/bin/virtualenvwrapper_lazy.sh ]; then
+  export WORKON_HOME=$HOME/.virtualenvs
+  export PROJECT_HOME=$HOME/dev
+  export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
+  export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+  source /usr/local/bin/virtualenvwrapper_lazy.sh
+fi
+
 if [ -x ~/.profile_local ]; then
   source ~/.profile_local
 fi
