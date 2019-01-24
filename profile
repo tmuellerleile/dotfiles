@@ -35,6 +35,8 @@ alias top='top -u'
 
 alias jslint='jslint --vars --sloppy --node --color --white --plusplus'
 
+export HOMEBREW_INSTALL_CLEANUP=1
+
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
