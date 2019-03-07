@@ -9,12 +9,15 @@ shopt -s histappend
 export CDPATH=".:~:~/dev"
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH
 
+export GPG_TTY=$(tty)
+
 export NODE_PATH=/usr/local/lib/node:/usr/local/share/npm/lib/node_modules
 
 if [[ $SSH_CONNECTION ]]; then
     export EDITOR=/usr/bin/vim
     export VISUAL=$EDITOR
     eval `/usr/bin/ssh-agent -s` > /dev/null
+    export PINENTRY_USER_DATA="USE_CURSES=1"
 else
     export EDITOR=/usr/local/bin/mvim # make mvim the default editor if we're on a local terminal
     alias vim=/usr/local/bin/mvim # ... and even remap vim to mvim
