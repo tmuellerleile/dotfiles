@@ -30,7 +30,9 @@ setopt inc_append_history
 setopt share_history
 
 # completion config:
-fpath=(/usr/local/share/zsh-completions $fpath)
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi
 autoload -Uz compinit && compinit
 
 # prompt config:
