@@ -6,7 +6,6 @@ set smartcase
 set modelines=0
 
 filetype off
-execute pathogen#infect()
 filetype plugin indent on
 
 " and no writing backups:
@@ -56,42 +55,7 @@ set autoindent
 au BufNewFile,BufRead *.zcml set filetype=xml
 au BufNewFile,BufRead *.mkd,*.markdown,*.mdwn,*.md set filetype=markdown
 
-" GUI options:
-if has("gui_running")
-    set background=dark
-    let g:solarized_contrast="high"
-    let g:solarized_hitrail=1
-    colorscheme solarized
-    set guifont=Input\ Mono:h15"
-    set lines=35
-    set columns=120
-    set guioptions-=T " remove toolbar
-    set mousehide
-    set cursorline
-
-    " fullscreen takes up entire screen
-    set fuoptions=maxhorz,maxvert
-else
-    " non-GUI options:
-    set background=dark
-endif
-
-" tab completion – taken from 'Hacking VIM 7.2' by Kim Schulz:
-function! SuperCleverTab()
-    if strpart(getline('.'), 0, col('.') - 1) =~ '^\s*$'
-        return "\<Tab>"
-    else
-        if &omnifunc != ''
-            return "\<C-X>\<C-O>"
-        elseif &dictionary != ''
-            return "\<C-K>"
-        else
-            return "\<C-N>"
-        endif
-    endif
-endfunction
-
-inoremap <Tab> <C-R>=SuperCleverTab()<cr>
+set background=dark
 
 let mapleader = ","
 
@@ -112,7 +76,3 @@ set gdefault
 
 nnoremap <tab> %
 vnoremap <tab> %
-
-let g:syntastic_mode_map = { 'mode': 'active' }
-let g:syntastic_javascript_checkers=['jshint']
-let g:syntastic_python_checkers=['pyflakes']
