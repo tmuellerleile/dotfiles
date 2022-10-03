@@ -2,6 +2,7 @@
     excludesfile = ~/.gitignore
 [init]
     templatedir = ~/.git_templates
+    defaultBranch = main
 [user]
     name = Tobias Muellerleile
     email = tobias@muellerleile.net
