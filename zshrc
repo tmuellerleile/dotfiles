@@ -37,6 +37,7 @@ autoload -Uz compinit && compinit
 # prompt config:
 autoload -Uz promptinit && promptinit && prompt walters
 setopt prompt_subst
+setopt prompt_sp
 autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
