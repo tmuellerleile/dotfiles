@@ -26,6 +26,7 @@ set showmatch
 set showmode
 set laststatus=2
 set scrolloff=3
+set background=light
 
 " text wrapping:
 set wrap
@@ -54,8 +55,6 @@ set autoindent
 " file type detection
 au BufNewFile,BufRead *.zcml set filetype=xml
 au BufNewFile,BufRead *.mkd,*.markdown,*.mdwn,*.md set filetype=markdown
-
-set background=dark
 
 let mapleader = ","
 
