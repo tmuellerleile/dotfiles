@@ -13,10 +13,10 @@ case "$2" in
 		# dito
 		;;
 	*)
-        # show last commit message:
-        echo "# Performing commit as:" >> "$1"
-        echo "# $(git config user.name) <$(git config user.email)>" >> "$1"
-        echo "#" >> "$1"
+		# show last commit message:
+		echo "# Performing commit as:" >> "$1"
+		echo "# $(git config user.name) <$(git config user.email)>" >> "$1"
+		echo "#" >> "$1"
 		echo "# Parent commit:" >> "$1"
 		echo "$(git log -1 | sed -n 's/^\(.*\)$/# \1/p')" >> "$1"
 		;;
