@@ -53,7 +53,6 @@ set expandtab
 set autoindent
 
 " file type detection
-au BufNewFile,BufRead *.zcml set filetype=xml
 au BufNewFile,BufRead *.mkd,*.markdown,*.mdwn,*.md set filetype=markdown
 
 let mapleader = ","
