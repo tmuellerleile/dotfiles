@@ -1,16 +1,8 @@
 # set some variables and defaults:
-export GPG_TTY=$(tty)
-
 export EDITOR=/usr/bin/vim
 export VISUAL=$EDITOR
 export PAGER=/usr/bin/less
 export LESS="-iqRx2"
-
-# set config for ssh connections (aka non-local sessions):
-if [[ -v SSH_CONNECTION ]]; then
-  eval `/usr/bin/ssh-agent -s` > /dev/null
-  export PINENTRY_USER_DATA="USE_CURSES=1"
-fi
 
 # cd config:
 setopt auto_cd
