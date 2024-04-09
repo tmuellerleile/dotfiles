@@ -22,6 +22,7 @@
     lg = log --stat
     lgg = log --all --graph --decorate=short
     ps = push
+    psf = push --force-with-lease --force-if-includes
     pl = pull
     am = commit --amend
     aa = add --all
