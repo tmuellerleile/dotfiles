@@ -41,3 +41,6 @@ zstyle ':vcs_info:*' enable git
 if [[ -x ~/.zshrc_local ]]; then
   source ~/.zshrc_local
 fi
+
+# make zle use emacs mode:
+bindkey -e
