@@ -1,5 +1,2 @@
 --ignore-dir=node_modules
 --ignore-dir=.venv
-
---type-add=js=json
---type-add=php=ctp
