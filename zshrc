@@ -1,3 +1,6 @@
+# homebrew-specific (.*)PATH config:
+eval "$(brew shellenv)"
+
 # set some variables and defaults:
 export EDITOR=/usr/bin/vim
 export VISUAL=$EDITOR
@@ -20,10 +23,7 @@ setopt hist_reduce_blanks
 setopt inc_append_history
 setopt share_history
 
-# completion config:
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
-fi
+# autocompletion config:
 autoload -Uz compinit && compinit
 
 # prompt config:
