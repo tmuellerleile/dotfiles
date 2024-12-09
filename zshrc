@@ -1,5 +1,5 @@
 # homebrew-specific (.*)PATH config:
-eval "$(brew shellenv)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # set some variables and defaults:
 export EDITOR=/usr/bin/vim
