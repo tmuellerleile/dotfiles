@@ -1,14 +1,3 @@
-[core]
-    excludesfile = ~/.gitignore
-
-[init]
-    templatedir = ~/.git_templates
-    defaultBranch = main
-
-[user]
-    name = Tobias Muellerleile
-    email = tobias@muellerleile.net
-
 [alias]
     st = status
     s = status -sb
@@ -34,32 +23,11 @@
 [color "diff"]
     whitespace = red reverse
 
+[core]
+    excludesfile = ~/.gitignore
+
 [diff]
     algorithm = histogram
-
-[pager]
-    log = /opt/homebrew/share/git-core/contrib/diff-highlight/diff-highlight | less
-    show = /opt/homebrew/share/git-core/contrib/diff-highlight/diff-highlight | less
-    diff = /opt/homebrew/share/git-core/contrib/diff-highlight/diff-highlight | less
-
-[push]
-    default = current
-    followtags = true
-
-[pull]
-    ff = only
-
-[merge]
-    conflictstyle = zdiff3
-
-[rerere]
-    enabled = true
-
-[transfer]
-    fsckobjects = true
-
-[pack]
-    threads = 0
 
 [github]
     user = tmuellerleile
@@ -68,5 +36,37 @@
     private = true
     browse = false
 
+[init]
+    templatedir = ~/.git_templates
+    defaultBranch = main
+
 [include]
     path = ~/.gitconfig_local
+
+[merge]
+    conflictstyle = zdiff3
+
+[pack]
+    threads = 0
+
+[pager]
+    log = /opt/homebrew/share/git-core/contrib/diff-highlight/diff-highlight | less
+    show = /opt/homebrew/share/git-core/contrib/diff-highlight/diff-highlight | less
+    diff = /opt/homebrew/share/git-core/contrib/diff-highlight/diff-highlight | less
+
+[pull]
+    ff = only
+
+[push]
+    default = current
+    followtags = true
+
+[rerere]
+    enabled = true
+
+[transfer]
+    fsckobjects = true
+
+[user]
+    name = Tobias Muellerleile
+    email = tobias@muellerleile.net
