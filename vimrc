@@ -8,7 +8,7 @@ set modelines=0
 filetype off
 filetype plugin indent on
 
-" and no writing backups:
+" don't write backups:
 set nobackup
 set nowritebackup
 
