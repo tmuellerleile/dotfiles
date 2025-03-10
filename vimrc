@@ -27,6 +27,7 @@ set showmode
 set laststatus=2
 set scrolloff=3
 set background=light
+set t_Co=16
 
 " text wrapping:
 set wrap
